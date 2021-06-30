@@ -1,21 +1,3 @@
-// search 늘리고 줄이고
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', '통합검색');
-});
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
 // badges 숨기기
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
@@ -147,6 +129,3 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); // 2021
